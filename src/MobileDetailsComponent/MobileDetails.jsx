@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './MobileDetails.css'
 import p1 from '../MobileDetailsComponent/p1.png'
 import p2 from '../MobileDetailsComponent/p2.png'
@@ -6,25 +6,88 @@ import p3 from '../MobileDetailsComponent/p3.png'
 import p4 from '../MobileDetailsComponent/p4.png'
 
 import usman from '../MobileDetailsComponent/usman.png'
+import { useLocation, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { BACKENDURL } from '../services/variables';
 
 const MobileDetails = () => {
+
+    const location=useLocation();
+    const productId=location.state.productId;
+    // const navigate=useNavigate();
+const [singlePhone, setSinglePhone] = useState([])
+
+    const fetchSingleMobile= async()=>{
+        try {
+            const response=await axios.get(BACKENDURL+ `/products/view-one/${productId}`);
+            console.log("response ",response);
+            setSinglePhone(response?.data?.data)
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
+
+    useEffect(()=>{
+
+        if(productId){
+            fetchSingleMobile();
+        }
+
+    },[])
+
+    
+/*
+
+
+product_category
+: 
+"mobilephones"
+product_display_image
+: 
+"https://images.unsplash.com/photo-1661961112958-fd9e2d2c9d9a"
+product_favourite
+: 
+false
+product_images
+: 
+(2) ['https://images.unsplash.com/photo-1661961112958-fd9e2d2c9d9a', 'https://images.unsplash.com/photo-1598327105666-5b89351aff97']
+product_location
+: 
+"Lahore"
+product_name
+: 
+"Google Pixel 7"
+product_owner_id
+: 
+"d60c2b42-6d1e-498b-a480-423aa44d9ca4"
+product_owners
+: 
+{id: 'd60c2b42-6d1e-498b-a480-423aa44d9ca4', created_at: '2026-01-11T07:57:09.109947+00:00', owner_name: 'Bilal Ahmed', owner_image: 'https://randomuser.me/api/portraits/men/55.jpg', owner_phone: '03055678901', …}
+product_price
+: 
+215000*/
+
+
     return (
         <>
             <div className='flex flex-row gap-4 justify-around mt-26 ml-16'>
-                <img className='w-171.5 h-131 ' src={p1} alt="" />
+              
+                <img className='w-171.5 h-131 ' src={singlePhone?.product_display_image} alt="" />
                 <div className='flex flex-col justify-center items-start gap-6'>
-                    <h1 className='font-[Poppins] font-semibold text-2xl leading-4 text-[#222222] text-start'>Samsung Galaxy Note 20 Ultra</h1>
-                    <h1 className='font-[Poppins] font-semibold text-2xl leading-4 text-[#141821] text-start'>Rs. 1,44,500</h1>
+                    <h1 className='font-[Poppins] font-semibold text-2xl leading-4 text-[#222222] text-start'>{singlePhone?.product_name}</h1>
+                    <h1 className='font-[Poppins] font-semibold text-2xl leading-4 text-[#141821] text-start'>Rs. {singlePhone?.product_price}</h1>
                     <div className="flex flex-row justify-between items-center gap-57">
-                        <p className='font-[Poppins] font-normal text-xs '>6 days  ago</p>
+                        <p className='font-[Poppins] font-normal text-xs '>{singlePhone?.created_at}</p>
                         <div className="flex flex-row justify-between gap-4">
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill={singlePhone?.product_favourite ? "red": "white"} xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_236_3356)">
                                     <path d="M13.8379 1.88337C14.9814 1.8834 16.0805 2.34718 16.9326 3.20466C17.8684 4.14643 18.4091 5.48823 18.4004 6.8863C18.3933 8.00409 17.9465 9.2563 16.9971 10.6148C16.2632 11.6647 15.2355 12.7714 13.9316 13.9C11.8219 15.7261 9.74312 16.9644 9.49902 17.108C9.24778 16.9612 7.15871 15.723 5.04492 13.9C3.73609 12.7712 2.70756 11.6644 1.97656 10.6148C1.02996 9.25563 0.592598 8.00451 0.599609 6.88728C0.608143 5.5403 1.0906 4.28522 1.94434 3.34724C2.8106 2.39565 3.9525 1.88342 5.16211 1.88337C6.70824 1.88337 8.14688 2.75033 8.98438 4.16267L9.5 5.03278L10.0166 4.16267C10.8541 2.75047 12.2918 1.88337 13.8379 1.88337Z" stroke="#333333" stroke-width="1.2" />
                                 </g>
                                 <defs>
                                     <clipPath id="clip0_236_3356">
-                                        <rect width="19" height="19" fill="white" />
+                                        <rect width="19" height="19" fill="none" />
                                     </clipPath>
                                 </defs>
                             </svg>
@@ -43,10 +106,10 @@ const MobileDetails = () => {
                         </div>
                     </div>
                     <div className="flex flex-row gap-3">
-                        <img className='w-19 h-19 rounded-full' src={usman} alt="" />
+                        <img className='w-19 h-19 rounded-full' src={singlePhone?.product_owners?.owner_image} alt="" />
                         <div className="flex flex-col ">
-                            <p className='font-[Poppins] font-bold text-sm leading-5 text-[#002F34]'>Usman Saeed</p>
-                            <p className='font-[Poppins] font-normal text-sm leading-5 text-[#002F34] '>Member since Aug 2017</p>
+                            <p className='font-[Poppins] font-bold text-sm leading-5 text-[#002F34]'>{singlePhone?.product_owners?.owner_name}</p>
+                            <p className='font-[Poppins] font-normal text-sm leading-5 text-[#002F34] '> {singlePhone?.product_owners?.created_at} </p>
                             <p className='font-[Poppins] font-bold text-sm leading-5 text-[#002F34] flex flex-row gap-5 items-center'>See profile <span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.249082 1.35078C-0.0759177 1.02578 -0.0352927 0.497656 0.289707 0.213281C0.614707 -0.0710938 1.10221 -0.0710938 1.38658 0.213281L7.07408 5.90078C7.39908 6.22578 7.39908 6.71328 7.07408 7.03828L1.38658 12.7258C1.06158 13.0508 0.574082 13.0508 0.249082 12.7664C-0.0759177 12.4414 -0.0759178 11.9539 0.208457 11.6289L0.249082 11.5883L5.36783 6.51016L0.249082 1.35078Z" fill="#002F34" />
                             </svg>
@@ -87,10 +150,15 @@ const MobileDetails = () => {
 
             </div>
             <div className="flex flex-row gap-5 mt-12 ml-29">
-                <img className='w-32 h-32 rounded-b-lg rounded-t-lg bg-gray-100' src={p1} alt="" />
-                <img className='w-32 h-32 rounded-b-lg rounded-t-lg bg-gray-100' src={p2} alt="" />
-                <img className='w-32 h-32 rounded-b-lg rounded-t-lg bg-gray-100' src={p3} alt="" />
-                <img className='w-32 h-32 rounded-b-lg rounded-t-lg bg-gray-100' src={p4} alt="" />
+                {singlePhone?.product_images?.map((image)=>{
+                    return (
+                        <div className='w-32 h-32 rounded-b-lg rounded-t-lg bg-gray-100'>
+                <img className='h-full w-full' src={image} alt="" />
+
+                            </div>
+                    )
+                })}
+               
 
             </div>
             <div className="flex flex-row gap-7  mt-12 ml-29">
@@ -119,7 +187,7 @@ const MobileDetails = () => {
             <h1 className='mt-12 ml-29 font-bold'>Related Ads</h1>
 
             <div className='flex flex-row mt-5 mr-0 mb-2.5 ml-27'>
-                <div className="flex gap-5 py-4 px-2.5">
+                <div className="flex gap-5 py-4 px-2.5 ">
                     <div className=" relative flex w-64 h-81 flex-col bg-[#f5f5f5] py-1.25 px-2.5">
                         <img className='w-full h-44 rounded-tl-xl rounded-tr-xl ' src={p3} alt="" />
                         <div className='content py-1.25 px-2.5'>

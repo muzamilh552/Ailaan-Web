@@ -33,6 +33,7 @@ function App() {
           path="/"
           element={
             <>
+            {/* Landing page */}
               <BannerAd />
               <AllCategories />
               <MobilePhones />
