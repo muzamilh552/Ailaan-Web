@@ -1,0 +1,190 @@
+.sidebar {
+    width: 231px;
+    height: 802px;
+    position: relative;
+    top: 75px;
+    left: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #FFFFFF;
+
+}
+
+.sidebar, .carsidebar p {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #002F34A3;
+}
+
+.sidebar, .carsidebar h2 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26.33px;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    color: #002F34;
+}
+
+.sidebar, .carsidebar h3 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 11.96px;
+    line-height: 23.94px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #002F34;
+}
+
+.sidebar, .carsidebar h1 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 11.96px;
+    line-height: 23.94px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #002F34;
+}
+
+.mobiles h1 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #002F34;
+}
+
+.mobile-list {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+display: flex;
+flex-direction: column;
+gap: 5px;
+align-items: start;
+color: #002F34A3;
+padding-left: 20px;
+}
+.location h1{
+    font-family: 'Poppins';
+font-weight: 700;
+font-style: Bold;
+font-size: 11.96px;
+line-height: 23.94px;
+letter-spacing: 0%;
+vertical-align: middle;
+text-transform: uppercase;
+color: #002F34;
+}
+#location{
+    width: 219px;
+height: 46px;
+top: 632px;
+left: 164px;
+color: #002F34;
+opacity: 1;
+border-radius: 4px;
+border-width: 1px;
+background-color: #FFFFFF;
+padding: 0 10px;
+}
+.pakistan{
+    margin: 10px 0;
+}
+.pakistan h1{
+    font-family: 'Poppins';
+font-weight: 700;
+font-style: Bold;
+font-size: 12px;
+line-height: 21px;
+letter-spacing: 0%;
+vertical-align: middle;
+text-transform: capitalize;
+color: #002F34;
+}
+a{
+    text-decoration: none;
+    color: blue;
+}
+.price{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+}
+.price input[type="range"] {
+  width: 100%;
+}
+.price h1{
+    font-family: 'Poppins';
+font-weight: 700;
+font-style: Bold;
+font-size: 12px;
+line-height: 30px;
+letter-spacing: 0px;
+color: #414141;
+}
+.line-bar{
+    font-family: 'Poppins';
+font-weight: 400;
+font-size: 12px;
+line-height: 19px;
+letter-spacing: 0px;
+color: #414141;
+display: flex;
+flex-direction: row;
+
+}
+.line-bar p{
+    padding-left: 100px;
+}
+
+.mobile-list input[type="checkbox"] {
+ width: 24px;
+height: 24px;
+top: 1319.92px;
+left: 169px;
+opacity: 1;
+border-radius: 4px;
+border-width: 1px;
+color: #002F34;
+}
+.mobile-list label{
+    margin-top: 5px;
+    font-family: 'Poppins';
+font-weight: 400;
+font-size: 12px;
+line-height: 21px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #002F34A3;
+display: flex;
+gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
