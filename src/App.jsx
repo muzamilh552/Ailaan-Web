@@ -21,7 +21,57 @@ import Login from './LoginForm/Login';
 import Signup from './SignUp/Signup';
 import Inbox from './Inbox/Inbox';
 import MobileDetails from './MobileDetailsComponent/MobileDetails';
+import axios from 'axios';
+import { BACKENDURL } from './services/variables';
+import { useEffect, useState } from 'react';
 function App() {
+
+
+  const [allProducts,setAllProducts]=useState([]);
+
+  const [avaiableCars,setAvailableCars ]=useState([]); 
+const [availablePhones,setAvailablePhones]=useState([]);
+const [availableHouses,setAvailableHouses]=useState([]);
+  const fetchAllProducts=async()=>{
+    try {
+      const response=await axios.get(BACKENDURL +"/products/view-all");
+      console.log("response ",response);
+      setAllProducts(response?.data?.data);
+
+      const filteredMobiles=response?.data?.data.filter((product)=>{
+        return product.product_category === "mobilephones";
+      })
+      setAvailablePhones(filteredMobiles);
+      const filteredCars=response?.data?.data.filter((product)=>{
+        return product.product_category === "cars";
+      })
+      setAvailableCars(filteredCars);
+
+      const filteredHouses=response.data.data.filter((product)=>{
+        return product.product_category === "houses";
+      })
+
+      setAvailableHouses(filteredHouses);
+
+
+    } catch (error) {
+      
+    }
+  }
+
+
+
+  useEffect(()=>{
+    fetchAllProducts();
+  },[])
+
+
+
+  console.log("HOUSES ",availableHouses);
+  console.log("MOBILE ",availablePhones);
+  console.log("CARS ",avaiableCars);
+
+
   return (
     <>
       <Header />
