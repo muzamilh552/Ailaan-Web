@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navbar.css';
 import { useNavigate } from 'react-router-dom';
-
+import PostYourAd from '../PostYourAd/PostYourAd';
 const Navbar = () => {
   const navigate = useNavigate();
 
@@ -9,7 +9,9 @@ const Navbar = () => {
     <div className="navbar">
       <ul id="navbar">
         <li className="li">
-          <button className="text">All Categories</button>
+          <button className="text" onClick={() => {
+            navigate("/")
+          }}>All Categories</button>
         </li>
 
         <li className="nav" onClick={() => navigate('/mobile')}>
@@ -28,8 +30,12 @@ const Navbar = () => {
         <li className="nav" onClick={() => {
           navigate("/inbox")
         }}>TV-Video-Audio</li>
-        <li className="nav">Tablets</li>
-        <li className="nav">Plots</li>
+        <li className="nav" onClick={() => {
+          navigate("/postyourad")
+        }}>Tablets</li>
+        <li className="nav" onClick={() => {
+          navigate("/createprofile")
+        }}>Plots</li>
       </ul>
     </div>
   );

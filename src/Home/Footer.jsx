@@ -4,9 +4,11 @@ import Vector from '../Home/Vector.png'
 import twitter from '../Home/twitter.png'
 import youtube from '../Home/youtube.png'
 import instagram from '../Home/instagram.png'
+import { useNavigate } from 'react-router-dom';
 
 
 const Footer = () => {
+    const navigate = useNavigate();
   return (
     <>
     <div className='footer'>
@@ -34,15 +36,25 @@ const Footer = () => {
 
 <ul className='ul'>
     <li className='white'>ABOUT US</li>
-    <li className='brown'>About Us</li>
-    <li className='brown'>Contact Us</li>
+    <li className='brown' onClick={() => {
+        navigate("/adssettings");
+    }}>About Us</li>
+    <li className='brown' onClick={() => {
+        navigate("/ads");
+    }}>Contact Us</li>
 </ul>
 
 <ul className='ul'>
     <li className='white'>Classified</li>
-    <li className='brown'>Help</li>
-    <li className='brown'>Terms & Conditions</li>
-    <li className='brown'>Privacy Policy</li>
+    <li className='brown cursor-pointer' onClick={() => {
+        navigate("/help");
+    }}>Help</li>
+    <li className='brown cursor-pointer' onClick={() => {
+        navigate("/termsandconditions");
+    }}>Terms & Conditions</li>
+    <li className='brown cursor-pointer' onClick={() => {
+        navigate("/privacypolicy");
+    }}>Privacy Policy</li>
 </ul>
 
     </div>

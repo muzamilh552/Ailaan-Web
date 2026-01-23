@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-
 import Header from './Home/Header';
 import Navbar from './Home/Navbar';
 import BannerAd from './Home/BannerAd';
@@ -21,55 +20,58 @@ import Login from './LoginForm/Login';
 import Signup from './SignUp/Signup';
 import Inbox from './Inbox/Inbox';
 import MobileDetails from './MobileDetailsComponent/MobileDetails';
-import axios from 'axios';
-import { BACKENDURL } from './services/variables';
-import { useEffect, useState } from 'react';
+// import axios from 'axios';
+// import { BACKENDURL } from './services/variables';
+// import { useEffect, useState } from 'react';
+import ViewProfile from './ViewProfile/ViewProfile';
+import CreateProfile from './CreateProfile/CreateProfile';
+import PostYourAd from './PostYourAd/PostYourAd';
+import Help from './Help/Help';
+import MsgSentSuccessful from './Help/MsgSentSuccessful';
+import TermsAndConditions from './TermsAndConditions';
+import PrivacyPolicy from './PrivacyPolicy';
+import AdsSettings from './Home/AdsSettings';
+import AD from './ADs/AD';
+
 function App() {
 
+//   const [allProducts,setAllProducts]=useState([]);
+//   const [avaiableCars,setAvailableCars ]=useState([]); 
+// const [availablePhones,setAvailablePhones]=useState([]);
+// const [availableHouses,setAvailableHouses]=useState([]);
+//   const fetchAllProducts=async()=>{
+//     try {
+//       const response=await axios.get(BACKENDURL +"/products/view-all");
+//       console.log("response ",response);
+//       setAllProducts(response?.data?.data);
 
-  const [allProducts,setAllProducts]=useState([]);
+//       const filteredMobiles=response?.data?.data.filter((product)=>{
+//         return product.product_category === "mobilephones";
+//       })
+//       setAvailablePhones(filteredMobiles);
+//       const filteredCars=response?.data?.data.filter((product)=>{
+//         return product.product_category === "cars";
+//       })
+//       setAvailableCars(filteredCars);
 
-  const [avaiableCars,setAvailableCars ]=useState([]); 
-const [availablePhones,setAvailablePhones]=useState([]);
-const [availableHouses,setAvailableHouses]=useState([]);
-  const fetchAllProducts=async()=>{
-    try {
-      const response=await axios.get(BACKENDURL +"/products/view-all");
-      console.log("response ",response);
-      setAllProducts(response?.data?.data);
+//       const filteredHouses=response.data.data.filter((product)=>{
+//         return product.product_category === "houses";
+//       })
 
-      const filteredMobiles=response?.data?.data.filter((product)=>{
-        return product.product_category === "mobilephones";
-      })
-      setAvailablePhones(filteredMobiles);
-      const filteredCars=response?.data?.data.filter((product)=>{
-        return product.product_category === "cars";
-      })
-      setAvailableCars(filteredCars);
+//       setAvailableHouses(filteredHouses);
 
-      const filteredHouses=response.data.data.filter((product)=>{
-        return product.product_category === "houses";
-      })
+//     } catch (error) {
+//       console.log(error)
+//     }
+//   }
 
-      setAvailableHouses(filteredHouses);
+//   useEffect(()=>{
+//     fetchAllProducts();
+//   },[])
 
-
-    } catch (error) {
-      
-    }
-  }
-
-
-
-  useEffect(()=>{
-    fetchAllProducts();
-  },[])
-
-
-
-  console.log("HOUSES ",availableHouses);
-  console.log("MOBILE ",availablePhones);
-  console.log("CARS ",avaiableCars);
+//   console.log("HOUSES ",availableHouses);
+//   console.log("MOBILE ",availablePhones);
+//   console.log("CARS ",avaiableCars);
 
 
   return (
@@ -106,6 +108,16 @@ const [availableHouses,setAvailableHouses]=useState([]);
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/inbox' element={<Inbox/>}/>
         <Route path='/mobiledetails' element={<MobileDetails/>}/>
+        <Route path='/viewprofile' element={<ViewProfile/>}/>
+        <Route path='/createprofile' element={<CreateProfile/>}/>
+        <Route path='/postyourad' element={<PostYourAd/>}/>
+        <Route path='/help' element={<Help/>}/>
+        <Route path='/msgsentsuccessful' element={<MsgSentSuccessful/>}/>
+        <Route path='/termsandconditions' element={<TermsAndConditions/>}/>
+        <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
+        <Route path='/adssettings' element={<AdsSettings/>}/>
+        <Route path='/ads/*' element={<AD/>}/>
+
 
       </Routes>
 

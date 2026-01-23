@@ -1,5 +1,5 @@
 .navbar {
-    width: 841px;
+    width: 70%;
     height: 36px;
     position: relative;
     left: 260px;
@@ -32,9 +32,9 @@
 
 #navbar {
     display: flex;
-    justify-content: space-evenly;
+
     align-items: center;
-    gap: 20px;
+
 }
 
 .nav {

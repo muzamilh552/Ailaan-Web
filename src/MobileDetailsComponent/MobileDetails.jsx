@@ -1,26 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import './MobileDetails.css'
 import p1 from '../MobileDetailsComponent/p1.png'
 import p2 from '../MobileDetailsComponent/p2.png'
 import p3 from '../MobileDetailsComponent/p3.png'
 import p4 from '../MobileDetailsComponent/p4.png'
 
-import usman from '../MobileDetailsComponent/usman.png'
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { BACKENDURL } from '../services/variables';
 
 const MobileDetails = () => {
-
-    const location=useLocation();
-    const productId=location.state.productId;
+const navigate = useNavigate();
+    const location = useLocation();
+    const productId = location.state.productId;
     // const navigate=useNavigate();
-const [singlePhone, setSinglePhone] = useState([])
+    const [singlePhone, setSinglePhone] = useState([])
 
-    const fetchSingleMobile= async()=>{
+    const fetchSingleMobile = async () => {
         try {
-            const response=await axios.get(BACKENDURL+ `/products/view-one/${productId}`);
-            console.log("response ",response);
+            const response = await axios.get(BACKENDURL + `/products/view-one/${productId}`);
+            console.log("response ", response);
             setSinglePhone(response?.data?.data)
         } catch (error) {
             console.log(error)
@@ -29,51 +27,20 @@ const [singlePhone, setSinglePhone] = useState([])
     }
 
 
-    useEffect(()=>{
+    useEffect(() => {
 
-        if(productId){
+        if (productId) {
             fetchSingleMobile();
         }
 
-    },[])
+    }, [fetchSingleMobile])
 
-    
-/*
-
-
-product_category
-: 
-"mobilephones"
-product_display_image
-: 
-"https://images.unsplash.com/photo-1661961112958-fd9e2d2c9d9a"
-product_favourite
-: 
-false
-product_images
-: 
-(2) ['https://images.unsplash.com/photo-1661961112958-fd9e2d2c9d9a', 'https://images.unsplash.com/photo-1598327105666-5b89351aff97']
-product_location
-: 
-"Lahore"
-product_name
-: 
-"Google Pixel 7"
-product_owner_id
-: 
-"d60c2b42-6d1e-498b-a480-423aa44d9ca4"
-product_owners
-: 
-{id: 'd60c2b42-6d1e-498b-a480-423aa44d9ca4', created_at: '2026-01-11T07:57:09.109947+00:00', owner_name: 'Bilal Ahmed', owner_image: 'https://randomuser.me/api/portraits/men/55.jpg', owner_phone: '03055678901', …}
-product_price
-: 
-215000*/
-
+    // console.log("single Phone", singlePhone);
 
     return (
         <>
             <div className='flex flex-row gap-4 justify-around mt-26 ml-16'>
-              
+
                 <img className='w-171.5 h-131 ' src={singlePhone?.product_display_image} alt="" />
                 <div className='flex flex-col justify-center items-start gap-6'>
                     <h1 className='font-[Poppins] font-semibold text-2xl leading-4 text-[#222222] text-start'>{singlePhone?.product_name}</h1>
@@ -81,7 +48,7 @@ product_price
                     <div className="flex flex-row justify-between items-center gap-57">
                         <p className='font-[Poppins] font-normal text-xs '>{singlePhone?.created_at}</p>
                         <div className="flex flex-row justify-between gap-4">
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill={singlePhone?.product_favourite ? "red": "white"} xmlns="http://www.w3.org/2000/svg">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill={singlePhone?.product_favourite ? "red" : "white"} xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_236_3356)">
                                     <path d="M13.8379 1.88337C14.9814 1.8834 16.0805 2.34718 16.9326 3.20466C17.8684 4.14643 18.4091 5.48823 18.4004 6.8863C18.3933 8.00409 17.9465 9.2563 16.9971 10.6148C16.2632 11.6647 15.2355 12.7714 13.9316 13.9C11.8219 15.7261 9.74312 16.9644 9.49902 17.108C9.24778 16.9612 7.15871 15.723 5.04492 13.9C3.73609 12.7712 2.70756 11.6644 1.97656 10.6148C1.02996 9.25563 0.592598 8.00451 0.599609 6.88728C0.608143 5.5403 1.0906 4.28522 1.94434 3.34724C2.8106 2.39565 3.9525 1.88342 5.16211 1.88337C6.70824 1.88337 8.14688 2.75033 8.98438 4.16267L9.5 5.03278L10.0166 4.16267C10.8541 2.75047 12.2918 1.88337 13.8379 1.88337Z" stroke="#333333" stroke-width="1.2" />
                                 </g>
@@ -110,7 +77,9 @@ product_price
                         <div className="flex flex-col ">
                             <p className='font-[Poppins] font-bold text-sm leading-5 text-[#002F34]'>{singlePhone?.product_owners?.owner_name}</p>
                             <p className='font-[Poppins] font-normal text-sm leading-5 text-[#002F34] '> {singlePhone?.product_owners?.created_at} </p>
-                            <p className='font-[Poppins] font-bold text-sm leading-5 text-[#002F34] flex flex-row gap-5 items-center'>See profile <span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <p className='font-[Poppins] font-bold text-sm leading-5 text-[#002F34] flex flex-row gap-5 items-center' onClick={() => {
+                                navigate("/viewprofile")
+                            }}>See profile <span><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.249082 1.35078C-0.0759177 1.02578 -0.0352927 0.497656 0.289707 0.213281C0.614707 -0.0710938 1.10221 -0.0710938 1.38658 0.213281L7.07408 5.90078C7.39908 6.22578 7.39908 6.71328 7.07408 7.03828L1.38658 12.7258C1.06158 13.0508 0.574082 13.0508 0.249082 12.7664C-0.0759177 12.4414 -0.0759178 11.9539 0.208457 11.6289L0.249082 11.5883L5.36783 6.51016L0.249082 1.35078Z" fill="#002F34" />
                             </svg>
                             </span></p>
@@ -133,7 +102,8 @@ product_price
                                 <path d="M9 0C13.9629 0 18 4.03758 18 9C18 13.7011 12.9656 18.1955 10.672 20.0002H7.32844C5.03508 18.1955 0 13.7009 0 9C0 4.03758 4.03758 0 9 0ZM9 2.00016C5.14055 2.00016 1.99992 5.14008 1.99992 9C1.99992 12.7505 6.61453 16.9812 8.99508 18.7641C10.7484 17.4347 16.0001 13.1081 16.0001 9C16.0001 5.14008 12.8599 2.00016 9 2.00016ZM9 4.99992C11.2055 4.99992 13.0001 6.7943 13.0001 9C13.0001 11.2057 11.2057 12.9998 9.00023 12.9998C6.79477 12.9998 5.00016 11.2055 5.00016 9C5.00016 6.79453 6.79453 4.99992 9 4.99992ZM9 6.99984C7.89703 6.99984 7.00008 7.89703 7.00008 9C7.00008 10.103 7.89703 10.9999 9.00023 10.9999C10.1034 10.9999 11.0002 10.103 11.0002 9C11.0002 7.89703 10.1032 6.99984 9.00023 6.99984H9Z" fill="#002F34" />
                             </svg>
 
-                            <p className='font-[Poppins] font-normal text-sm text-[#002F34] '>Dharampura, Lahore</p>
+                            <p className='font-[Poppins] font-normal text-sm text-[#002F34] '>{singlePhone?.
+                                product_location}</p>
                         </div>
                     </div>
                     <div className="flex flex-row gap-27 items-center">
@@ -150,15 +120,15 @@ product_price
 
             </div>
             <div className="flex flex-row gap-5 mt-12 ml-29">
-                {singlePhone?.product_images?.map((image)=>{
+                {singlePhone?.product_images?.map((image) => {
                     return (
                         <div className='w-32 h-32 rounded-b-lg rounded-t-lg bg-gray-100'>
-                <img className='h-full w-full' src={image} alt="" />
+                            <img className='h-full w-full' src={image} alt="" />
 
-                            </div>
+                        </div>
                     )
                 })}
-               
+
 
             </div>
             <div className="flex flex-row gap-7  mt-12 ml-29">
@@ -166,7 +136,7 @@ product_price
                     <h1 className='font-[Poppins] font-bold text-2xl leading-6 items-center'>Details</h1>
                     <div className="flex flex-row justify-between ">
                         <p className='font-[Poppins] font-normal text-[#002F34] text-sm'>Brand</p>
-                        <p className='font-[Poppins] font-bold text-[#002F34] text-sm'>Infinix</p>
+                        <p className='font-[Poppins] font-bold text-[#002F34] text-sm'>{singlePhone?.product_name}</p>
                     </div>
                     <div className="flex flex-row justify-between ">
                         <p className='font-[Poppins] font-normal text-[#002F34] text-sm'>Condition</p>
@@ -174,13 +144,13 @@ product_price
                     </div>
                     <div className="flex flex-row justify-between ">
                         <p className='font-[Poppins] font-normal text-[#002F34] text-sm'>Price</p>
-                        <p className='font-[Poppins] font-bold text-[#002F34] text-sm'>29,000</p>
+                        <p className='font-[Poppins] font-bold text-[#002F34] text-sm'>{singlePhone?.product_price}</p>
                     </div>
 
                 </div>
                 <div className="w-214 h-44 flex flex-col ">
                     <h1 className='font-[Poppins] font-bold text-2xl leading-6 items-center mb-4'>Details</h1>
-                    <p className='font-[Poppins] font-normal text-xs leading-5 text-[#5A5A5A]'>Samsung  fold 2 note 20 Ultra available PT approve non PTA sim time available</p>
+                    <p className='font-[Poppins] font-normal text-xs leading-5 text-[#5A5A5A]'>{singlePhone?.product_name}</p>
                 </div>
             </div>
 
@@ -226,7 +196,7 @@ product_price
                 </div>
 
                 <div className="flex gap-5 py-4 px-2.5">
-                    <div className=" relative flex w-64 h-81 flex-col bg-[#f5f5f5] py-1.25 px-2.5">
+                    <div className=" relative flex w-64 flex-col bg-[#f5f5f5] py-1.25 px-2.5 h-auto">
                         <img className='w-full h-44 rounded-tl-xl rounded-tr-xl ' src={p4} alt="" />
                         <div className='content py-1.25 px-2.5'>
                             <h3 className=' w-53.75 h-11 font-semibold text-sm text-[#141821] leading-5 tracking-normal font-[Poppins] '>iPhone 14 Pro Max 1TB Factory Uncloked</h3>
@@ -264,7 +234,7 @@ product_price
                 </div>
 
                 <div className="flex gap-5 py-4 px-2.5">
-                    <div className=" relative flex w-64 h-81 flex-col bg-[#f5f5f5] py-1.25 px-2.5">
+                    <div className=" relative flex w-64 flex-col bg-[#f5f5f5] py-1.25 px-2.5 h-auto">
                         <img className='w-full h-44 rounded-tl-xl rounded-tr-xl ' src={p2} alt="" />
                         <div className='content py-1.25 px-2.5'>
                             <h3 className=' w-53.75 h-11 font-semibold text-sm text-[#141821] leading-5 tracking-normal font-[Poppins] '>iPhone 14 Pro Max 1TB Factory Uncloked</h3>
@@ -302,7 +272,7 @@ product_price
                 </div>
 
                 <div className="flex gap-5 py-4 px-2.5">
-                    <div className=" relative flex w-64 h-81 flex-col bg-[#f5f5f5] py-1.25 px-2.5">
+                    <div className=" relative flex w-64 flex-col bg-[#f5f5f5] py-1.25 px-2.5 h-auto">
                         <img className='w-full h-44 rounded-tl-xl rounded-tr-xl ' src={p1} alt="" />
                         <div className='content py-1.25 px-2.5'>
                             <h3 className=' w-53.75 h-11 font-semibold text-sm text-[#141821] leading-5 tracking-normal font-[Poppins] '>iPhone 14 Pro Max 1TB Factory Uncloked</h3>

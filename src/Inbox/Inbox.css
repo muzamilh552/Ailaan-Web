@@ -97,7 +97,9 @@ hr {
     left: 10px;
     top: 7px;
 }
-
+.inboxSection{
+    margin-left: 30px;
+}
 .inboxCard {
     width: 283px;
     display: flex;
