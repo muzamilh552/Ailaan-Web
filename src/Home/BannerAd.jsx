@@ -3,11 +3,13 @@ import Banner from '../Home/Banner.png'
 
 const BannerAd = () => {
   return (
-    <div className='banner'>
-      <img src={Banner} alt="" />
-      <h1 className='h1'>All Categories</h1>
+    <>
+    <div className='flex flex-col justify-center items-center mt-19'>
+      <img className='w-[82%] flex justify-center items-center ' src={Banner} alt="" />
 
     </div>
+
+    </>
   );
 }
 

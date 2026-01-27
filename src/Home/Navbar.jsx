@@ -6,10 +6,10 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="navbar">
-      <ul id="navbar">
-        <li className="li">
-          <button className="text" onClick={() => {
+    <div className="navba flex flex-row justify-center mt-10">
+      <ul className='flex flex-row justify-center gap-5  items-center '>
+        <li>
+          <button className="flex justify-center items-center gap-3 h-[6vh] bg-[#2BBEF9] text-[#FFFFFF] font-normal rounded-3xl w-[9vw]" onClick={() => {
             navigate("/")
           }}>All Categories</button>
         </li>

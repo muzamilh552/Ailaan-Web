@@ -13,13 +13,13 @@ const Partners = () => {
                        <h2>Our Partners</h2>
                        <h3>View More</h3>
                    </div>
-               <div className='partner'>
-                           <img className='cartner' src={cartner} alt="" />
-                           <img className='facebook' src={facebook} alt="" />
-                           <img className='chanel' src={chanel} alt="" />
-                           <img className='microsoft' src={microsoft} alt="" />
-                           <img className='hermes' src={hermes} alt="" />
-                           <img className='dg' src={dg} alt="" />
+               <div className='flex flex-row justify-evenly items-center'>
+                           <img className='w-[7vw]' src={cartner} alt="" />
+                           <img className='w-[7vw]' src={facebook} alt="" />
+                           <img className='w-[7vw]' src={chanel} alt="" />
+                           <img className='w-[7vw]' src={microsoft} alt="" />
+                           <img className='w-[7vw]' src={hermes} alt="" />
+                           <img className='w-[7vw]' src={dg} alt="" />
                </div>
                </>
   );

@@ -32,6 +32,8 @@ import TermsAndConditions from './TermsAndConditions';
 import PrivacyPolicy from './PrivacyPolicy';
 import AdsSettings from './Home/AdsSettings';
 import AD from './ADs/AD';
+import ChooseCategoryPost from './PostYourAd/ChooseCategoryPost';
+
 
 function App() {
 
@@ -117,6 +119,7 @@ function App() {
         <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
         <Route path='/adssettings' element={<AdsSettings/>}/>
         <Route path='/ads/*' element={<AD/>}/>
+        <Route path='/choosecategorypost' element={<ChooseCategoryPost/>}/>
 
 
       </Routes>

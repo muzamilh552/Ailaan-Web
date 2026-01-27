@@ -8,8 +8,9 @@
 
 .view {
     display: flex;
-    justify-content: space-around;
-    margin-top: 120px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 60px;
     margin-bottom: 40px;
     position: relative;
 
@@ -153,7 +154,7 @@
 } */
 
 
-.partner {
+/* .partner {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -188,4 +189,4 @@
 .dg {
     width: 112.37px;
     height: 68.13px;
-}
+} */
