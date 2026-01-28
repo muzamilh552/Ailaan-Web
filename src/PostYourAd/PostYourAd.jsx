@@ -3,7 +3,7 @@ import { GoPlusCircle } from "react-icons/go";
 const PostYourAd = () => {
     return (
         <>
-            <div className="flex flex-row justify-start gap-7 items-start mt-25">
+            <div className="flex flex-row justify-start gap-7 items-start mt-25 max-sm:ml-[20%] max-sm:mt-12">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="32" height="32" rx="16" fill="#FAFAFA" />
                     <path d="M24.75 14.75H10.0276L14.4129 10.386C14.9022 9.899 14.9041 9.10756 14.4171 8.61825C13.9301 8.12887 13.1386 8.12706 12.6493 8.614L6.11777 15.114C6.11734 15.1144 6.11702 15.1148 6.11665 15.1152C5.62859 15.6022 5.62702 16.3962 6.11652 16.8848C6.11696 16.8852 6.11727 16.8856 6.11765 16.886L12.6491 23.386C13.1384 23.8729 13.9299 23.8712 14.417 23.3817C14.904 22.8924 14.9021 22.101 14.4128 21.614L10.0276 17.25H24.75C25.4404 17.25 26 16.6904 26 16C26 15.3096 25.4404 14.75 24.75 14.75Z" fill="#333333" />
@@ -33,9 +33,9 @@ const PostYourAd = () => {
                     </defs>
                 </svg>
             </div>
-            <h2 className='font-[Poppins] font-medium text-[#333333] text-xl text-center'>Post Your Ad</h2>
+            <h2 className='font-[Poppins] font-medium text-[#333333] text-xl text-center max-sm:ml-[20%]'>Post Your Ad</h2>
 
-            <div className='flex flex-col border-2 border-[#D8DFE0] p-5 mt-7 mx-15'>
+            <div className='flex flex-col border-2 border-[#D8DFE0] mb-10 p-5 mt-7 mx-15 max-sm:ml-[22%] max-sm:p-3 max-sm:w-[70%]'>
                 <div className="flex flex-row gap-6 items-center">
                     <h1 className='font-[Poppins] font-semibold text-base text-[#000000]'>Selected Category</h1>
                     <button className='flex flex-row gap-3 items-center justify-center w-46 h-10 bg-[#2BBEF917] rounded-3xl text-[#667085]'>Mobiles <span><svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,42 +44,41 @@ const PostYourAd = () => {
                     </span> Tablets</button>
                 </div>
                 <h1 className='font-[Poppins] font-semibold text-base text-[#000000] mt-10'>Include Details of your AD</h1>
-                <form action="">
-                    <div className="flex flex-row gap-4 mt-5">
+                <form action="" className='max-sm:flex max-sm:flex-col'>
+                    <div className="flex flex-row gap-4 mt-5 max-sm:flex-col">
                         <div className="flex flex-col gap-3">
                             <label className='font-[Poppins] font-normal text-sm text-[#414141]' htmlFor="">Ad Title</label>
-                            <input className='text-[#414141] w-117 h-12 border-2 border-[#D0D0D0]' type="text" name="" id="" placeholder='Enter Title ' />
-                            <p className='font-[Poppins] font-normal text-[10px] text-[#333333] text-right'>Mention the key features of your item (e.g. brand, model, age, type)</p>
+                            <input className='text-[#414141] w-117 h-12 border-2 border-[#D0D0D0] max-sm:w-[90%]' type="text" name="" id="" placeholder='Enter Title ' />
+                            <p className='font-[Poppins] font-normal text-[10px] text-[#333333] text-right max-sm:text-left'>Mention the key features of your item (e.g. brand, model, age, type)</p>
                         </div>
 
                         <div className="flex flex-col gap-3">
                             <label className='font-[Poppins] font-normal text-sm text-[#414141]' htmlFor="">Brand</label>
-                            <select name="" id="" className='text-[#414141] w-117 h-12 border-2 border-[#D0D0D0] pl-2' >
+                            <select name="" id="" className='text-[#414141] w-117 h-12 border-2 border-[#D0D0D0] pl-2 max-sm:w-[90%]' >
                                 <option value="">Select Your Brand</option>
                                 <option value="">J.</option>
                                 <option value="">Pakistan</option>
-
                             </select>
 
                         </div>
 
                     </div>
 
-                    <div className="flex flex-row gap-4 mt-5">
+                    <div className="flex flex-row gap-4 mt-5 max-sm:flex-col">
                         <div className="flex flex-col gap-3">
                             <label className='font-[Poppins] font-normal text-sm text-[#414141]' htmlFor="">Description</label>
-                            <textarea className='text-[#414141] w-117 h-34 p-3 border-2 border-[#D0D0D0]' name="" id="" placeholder='Enter text here'></textarea>
-                            <p className='font-[Poppins] font-normal text-[10px] text-[#333333] text-right'>Include condition, features and reason for selling</p>
+                            <textarea className='text-[#414141] w-117 h-34 p-3 border-2 border-[#D0D0D0] max-sm:w-[90%] max-sm:h-28' name="" id="" placeholder='Enter text here'></textarea>
+                            <p className='font-[Poppins] font-normal text-[10px] text-[#333333] text-right max-sm:text-left'>Include condition, features and reason for selling</p>
                         </div>
 
-                        <div className="flex flex-col gap-3 ">
+                        <div className="flex flex-col gap-3">
                             <p className='font-[Poppins] font-normal text-sm text-[#414141]'>Condition</p>
-                            <div className="flex flex-row flex-wrap gap-3 w-95">
-                                <button className='w-20 h-10 border-2 border-[#D0D0D0] rounded-3xl text-center text-[#858997]'>New</button>
-                                <button className='w-27 h-10 border-2 border-[#D0D0D0] rounded-3xl text-center text-[#858997]'>Open Box</button>
+                            <div className="flex flex-row flex-wrap gap-3 w-95 max-sm:text-sm max-sm:w-full">
+                                <button className='w-20 h-10 border-2 border-[#D0D0D0] rounded-3xl text-center text-[#858997] max-sm:w-16'>New</button>
+                                <button className='w-27 h-10 border-2 border-[#D0D0D0] rounded-3xl text-center text-[#858997] max-sm:w-24'>Open Box</button>
                                 <button className='w-20 h-10 border-2 border-[#D0D0D0] rounded-3xl text-center text-[#858997]'>Used</button>
-                                <button className='w-33 h-10 border-2 border-[#D0D0D0] rounded-3xl text-center text-[#858997]'>Refurbished</button>
-                                <button className='w-51 h-10 border-2 border-[#D0D0D0] rounded-3xl text-center text-[#858997]'>For Parts or Not Working</button>
+                                <button className='w-33 h-10 border-2 border-[#D0D0D0] rounded-3xl text-center text-[#858997] max-sm:w-28'>Refurbished</button>
+                                <button className='w-51 h-10 border-2 border-[#D0D0D0] rounded-3xl text-center text-[#858997] max-sm:w-46'>For Parts or Not Working</button>
                             </div>
                         </div>
 
@@ -87,7 +86,7 @@ const PostYourAd = () => {
                     <h1 className='text-[#000000] font-[Poppins] font-semibold text-base mt-15 mb-5'>Set A Price</h1>
                     <div className="flex flex-col gap-3">
                         <label className='font-[Poppins] font-normal text-sm text-[#414141]' htmlFor="">Price</label>
-                        <input className='text-[#414141] w-130 h-12 pl-3 border-2 border-[#D0D0D0]' type="text" name="" id="" placeholder='Enter Price in Rupees ' />
+                        <input className='text-[#414141] w-130 h-12 pl-3 border-2 border-[#D0D0D0] max-sm:w-[90%]' type="text" name="" id="" placeholder='Enter Price in Rupees ' />
                     </div>
                     <div className="flex flex-col gap-3 mt-5 mb-20">
                         <p className='font-[Poppins] font-normal text-sm text-[#414141]'>Images</p>
@@ -108,10 +107,10 @@ const PostYourAd = () => {
                         </div>
                         <p className='text-[#333333] font-[Poppins] font-normal text-[10px]'>Add more images using the plus button. For the cover picture we recommend using the landscape mode.</p>
                     </div>
-                    <h1 className='text-[#000000] font-[Poppins] font-semibold text-base mt-15 mb-5'>Your Ads Location</h1>
+                    <h1 className='text-[#000000] font-[Poppins] font-semibold text-base mt-15 mb-5 max-sm:mt-4'>Your Ads Location</h1>
                     <div className="flex flex-col gap-3">
                         <label className='font-[Poppins] font-normal text-sm text-[#414141]' htmlFor="">Location</label>
-                        <select name="" id="" className='text-[#414141] w-117 h-12 border-2 border-[#D0D0D0] pl-2' >
+                        <select name="" id="" className='text-[#414141] w-117 h-12 border-2 border-[#D0D0D0] pl-2 max-sm:w-[90%]' >
                             <option value="">Enter Location</option>
                             <option value="">Karachi</option>
                             <option value="">Lahore</option>
@@ -121,21 +120,21 @@ const PostYourAd = () => {
                     <h1 className='text-[#000000] font-[Poppins] font-semibold text-base mt-15 mb-5'>Review Your Details</h1>
                     <div className="flex flex-col gap-3">
                         <label className='font-[Poppins] font-normal text-sm text-[#414141]' htmlFor="">Name</label>
-                        <input className='text-[#414141] w-117 h-12 border-2 border-[#D0D0D0]' type="text" name="" id="" placeholder='Taimoor A ' />
+                        <input className='text-[#414141] w-117 h-12 border-2 border-[#D0D0D0] max-sm:w-[90%]' type="text" name="" id="" placeholder='Taimoor A ' />
                     </div>
                     <h1 className='text-[#000000] font-[Poppins] font-semibold text-base mt-15 mb-5'>Lets Verify your Phone Number</h1>
                     <div className="flex flex-col gap-3">
                         <label className='font-[Poppins] font-normal text-sm text-[#414141]' htmlFor="">Mobile Phone Number</label>
-                        <input className='text-[#414141] w-117 h-12 border-2 border-[#D0D0D0]' type="text" name="" id="" placeholder='+92  |   ' />
+                        <input className='text-[#414141] w-117 h-12 border-2 border-[#D0D0D0] max-sm:w-[90%]' type="text" name="" id="" placeholder='+92  |   ' />
                     </div>
-                    <div className="flex flex-row justify-between items-center w-116 mt-7 mb-12">
+                    <div className="flex flex-row justify-between items-center w-116 mt-7 mb-12 max-sm:flex-col max-sm:gap-3 max-sm:items-start max-sm:w-full">
                         <h1 className='text-[#000000] font-[Poppins] font-semibold text-base '>Show my Phone number in Ads</h1>
                         <div class="w-14 h-7 bg-black rounded-full flex items-center px-1">
 
                             <div class="w-5 h-5 bg-white rounded-full ml-auto"></div>
                         </div>
                     </div>
-                    <button className='w-35 h-12 border-2 bg-[#2BBEF9] rounded-3xl text-[white] font-[Poppins] font-bold text-xs mb-4'>POST NOW</button>
+                    <button className='w-35 h-12 border-2 bg-[#2BBEF9] rounded-3xl text-[white] font-[Poppins] font-bold text-xs mb-4 max-sm:w-full'>POST NOW</button>
                 </form>
             </div>
         </>

@@ -30,7 +30,24 @@ li {
     padding-left: 3vw;
     border: 1px solid #2BBEF9;
 }
+@media (max-width:440px){
+  .search {
+    position: relative;
+    width: 75vw;
+right: 20px;
+    padding-left: 8vw;
+    font-size: 12px;
+}
+.searchBlack {
+    position: absolute;
+left: 124vw;
+}
+.logo {
+    margin-left: 100px;
+}
 
+
+}
 .searchBlack {
     position: absolute;
     right: 245px;

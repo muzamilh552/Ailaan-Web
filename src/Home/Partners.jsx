@@ -13,13 +13,13 @@ const Partners = () => {
                        <h2>Our Partners</h2>
                        <h3>View More</h3>
                    </div>
-               <div className='flex flex-row justify-evenly items-center'>
-                           <img className='w-[7vw]' src={cartner} alt="" />
-                           <img className='w-[7vw]' src={facebook} alt="" />
-                           <img className='w-[7vw]' src={chanel} alt="" />
-                           <img className='w-[7vw]' src={microsoft} alt="" />
-                           <img className='w-[7vw]' src={hermes} alt="" />
-                           <img className='w-[7vw]' src={dg} alt="" />
+               <div className='flex flex-row justify-evenly items-center max-sm:flex-wrap max-sm:gap-7 max-sm:justify-center max-sm:ml-27'>
+                           <img className='w-[7vw] max-sm:w-[25vw]' src={cartner} alt="" />
+                           <img className='w-[7vw] max-sm:w-[25vw]' src={facebook} alt="" />
+                           <img className='w-[7vw] max-sm:w-[25vw]' src={chanel} alt="" />
+                           <img className='w-[7vw] max-sm:w-[25vw]' src={microsoft} alt="" />
+                           <img className='w-[7vw] max-sm:w-[25vw]' src={hermes} alt="" />
+                           <img className='w-[7vw] max-sm:w-[25vw]' src={dg} alt="" />
                </div>
                </>
   );

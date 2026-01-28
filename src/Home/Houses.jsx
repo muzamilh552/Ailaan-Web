@@ -41,9 +41,9 @@ const Houses = () => {
                 <h2>Houses</h2>
                 <h3>View More</h3>
             </div>
-            <div className='flex flex-row gap-5 mt-5 mr-0 mb-2.5 ml-27 flex-wrap'>
+            <div className='flex flex-row gap-5 mt-5 mr-0 mb-2.5 ml-27 flex-wrap max-sm:justify-center max-sm:items-center'>
 
-                <div className="flex gap-5 py-4 px-2.5 flex-wrap" >
+                <div className="flex gap-5 py-4 px-2.5 flex-wrap max-sm:flex-col" >
 
 
                     {availableHouses.slice(0,4).map((product) => {

@@ -15,10 +15,11 @@ import fashion from '../PostYourAd/fashion.png'
 import book from '../PostYourAd/book.png'
 import kid from '../PostYourAd/kid.png'
 
+
 const ChooseCategoryPost = () => {
     return (
         <>
-            <div className="flex flex-row justify-start gap-7 items-start mt-25">
+            <div className="flex flex-row justify-start gap-7 items-start mt-25 max-sm:ml-[20%] max-sm:mt-12">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="32" height="32" rx="16" fill="#FAFAFA" />
                     <path d="M24.75 14.75H10.0276L14.4129 10.386C14.9022 9.899 14.9041 9.10756 14.4171 8.61825C13.9301 8.12887 13.1386 8.12706 12.6493 8.614L6.11777 15.114C6.11734 15.1144 6.11702 15.1148 6.11665 15.1152C5.62859 15.6022 5.62702 16.3962 6.11652 16.8848C6.11696 16.8852 6.11727 16.8856 6.11765 16.886L12.6491 23.386C13.1384 23.8729 13.9299 23.8712 14.417 23.3817C14.904 22.8924 14.9021 22.101 14.4128 21.614L10.0276 17.25H24.75C25.4404 17.25 26 16.6904 26 16C26 15.3096 25.4404 14.75 24.75 14.75Z" fill="#333333" />
@@ -50,143 +51,156 @@ const ChooseCategoryPost = () => {
             </div>
             <h2 className='font-[Poppins] font-medium text-[#333333] text-xl text-center'>Post Your Ad</h2>
 
-            <div className='flex flex-col border-2 border-[#D8DFE0] p-5 mt-7  mx-15'>
+            <div className='flex flex-col border-2 border-[#D8DFE0] p-5 mt-7 mb-10  mx-15 max-sm:ml-[22%] max-sm:p-3 max-sm:w-[70%]'>
                 <h1 className='font-[Poppins] font-semibold text-base text-[#000000] mb-6'>Choose a Category</h1>
 
-                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1">
-                    <div className="flex flex-row gap-2 items-center ">
-                        <img className='w-10 h-10 bg-[#d394d3] rounded-full' src={phone} alt="" />
-                        <p className='font-[Poppins] font-normal text-xs text-[#000000] '>Mobiles</p>
+                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1 max-sm:w-[30%] max-sm:py-1 max-sm:p-0 max-sm:justify-around">
+                    <div className="flex flex-row gap-2 items-center max-sm:flex-col max-sm:justify-start max-sm:items-start">
+                        <img className='w-10 h-10 bg-[#d394d3] rounded-full max-sm:w-6 max-sm:h-6' src={phone} alt="" />
+                        <p className='font-[Poppins] font-normal text-xs text-[#000000] max-sm:text-[10px]'>Mobiles</p>
                     </div>
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11L6 6L1 1" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-      <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1">
-                    <div className="flex flex-row gap-2 items-center ">
-                        <img className='w-10 h-10 bg-[#69BAFA] rounded-full' src={car} alt="" />
-                        <p className='font-[Poppins] font-normal text-xs text-[#000000] '>Vehicles</p>
+
+                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1 max-sm:w-[30%] max-sm:py-1 max-sm:p-0 max-sm:justify-around">
+                    <div className="flex flex-row gap-2 items-center max-sm:flex-col max-sm:justify-start max-sm:items-start">
+                        <img className='w-10 h-10 bg-[#69BAFA] rounded-full max-sm:w-6 max-sm:h-6' src={car} alt="" />
+                        <p className='font-[Poppins] font-normal text-xs text-[#000000] max-sm:text-[10px]'>Vehicles</p>
                     </div>
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11L6 6L1 1" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-      <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1">
-                    <div className="flex flex-row gap-2 items-center ">
-                        <img className='w-10 h-10 bg-[#F6B742] rounded-full' src={sale} alt="" />
-                        <p className='font-[Poppins] font-normal text-xs text-[#000000] '>Property For Sale</p>
+
+                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1 max-sm:w-[30%] max-sm:py-1 max-sm:p-2 max-sm:justify-around">
+                    <div className="flex flex-row gap-2 items-center max-sm:flex-col max-sm:justify-start max-sm:items-start">
+                        <img className='w-10 h-10 bg-[#F6B742] rounded-full max-sm:w-6 max-sm:h-6' src={sale} alt="" />
+                        <p className='font-[Poppins] font-normal text-xs text-[#000000] max-sm:text-[10px]'>Property For Sale</p>
                     </div>
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11L6 6L1 1" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-                      <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1">
-                    <div className="flex flex-row gap-2 items-center ">
-                        <img className='w-10 h-10 bg-[#B6F4FF] rounded-full' src={rent} alt="" />
-                        <p className='font-[Poppins] font-normal text-xs text-[#000000] '>Property For Rent</p>
+
+                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1 max-sm:w-[30%] max-sm:py-1 max-sm:p-2 max-sm:justify-around">
+                    <div className="flex flex-row gap-2 items-center max-sm:flex-col max-sm:justify-start max-sm:items-start">
+                        <img className='w-10 h-10 bg-[#B6F4FF] rounded-full max-sm:w-6 max-sm:h-6' src={rent} alt="" />
+                        <p className='font-[Poppins] font-normal text-xs text-[#000000] max-sm:text-[10px]'>Property For Rent</p>
                     </div>
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11L6 6L1 1" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-                      <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1">
-                    <div className="flex flex-row gap-2 items-center ">
-                        <img className='w-10 h-10 bg-[#A094F8] rounded-full' src={electronic} alt="" />
-                        <p className='font-[Poppins] font-normal text-xs text-[#000000] '>Electronics & Home Appliances</p>
+
+                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1 max-sm:w-[30%] max-sm:py-1 max-sm:p-2 max-sm:justify-around">
+                    <div className="flex flex-row gap-2 items-center max-sm:flex-col max-sm:justify-start max-sm:items-start">
+                        <img className='w-10 h-10 bg-[#A094F8] rounded-full max-sm:w-6 max-sm:h-6' src={electronic} alt="" />
+                        <p className='font-[Poppins] font-normal text-xs text-[#000000] max-sm:text-[9px]'>Electronics & Home Appliances</p>
                     </div>
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11L6 6L1 1" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-                      <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1">
-                    <div className="flex flex-row gap-2 items-center ">
-                        <img className='w-10 h-10 bg-[#ED5659] rounded-full' src={bike} alt="" />
-                        <p className='font-[Poppins] font-normal text-xs text-[#000000] '>Bikes</p>
+
+                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1 max-sm:w-[30%] max-sm:py-1 max-sm:p-0 max-sm:justify-around">
+                    <div className="flex flex-row gap-2 items-center max-sm:flex-col max-sm:justify-start max-sm:items-start">
+                        <img className='w-10 h-10 bg-[#ED5659] rounded-full max-sm:w-6 max-sm:h-6' src={bike} alt="" />
+                        <p className='font-[Poppins] font-normal text-xs text-[#000000] max-sm:text-[10px]'>Bikes</p>
                     </div>
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11L6 6L1 1" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-                      <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1">
-                    <div className="flex flex-row gap-2 items-center ">
-                        <img className='w-10 h-10 bg-[#FED9FF] rounded-full' src={business} alt="" />
-                        <p className='font-[Poppins] font-normal text-xs text-[#000000] '>Business, Industrial & Agriculture</p>
+
+                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1 max-sm:w-[30%] max-sm:py-1 max-sm:p-2 max-sm:justify-around">
+                    <div className="flex flex-row gap-2 items-center max-sm:flex-col max-sm:justify-start max-sm:items-start">
+                        <img className='w-10 h-10 bg-[#FED9FF] rounded-full max-sm:w-6 max-sm:h-6' src={business} alt="" />
+                        <p className='font-[Poppins] font-normal text-xs text-[#000000] max-sm:text-[9px]'>Business, Industrial & Agriculture</p>
                     </div>
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11L6 6L1 1" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-                      <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1">
-                    <div className="flex flex-row gap-2 items-center ">
-                        <img className='w-10 h-10 bg-[#B6F4FF] rounded-full' src={service} alt="" />
-                        <p className='font-[Poppins] font-normal text-xs text-[#000000] '>Services</p>
+
+                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1 max-sm:w-[30%] max-sm:py-1 max-sm:p-0 max-sm:justify-around">
+                    <div className="flex flex-row gap-2 items-center max-sm:flex-col max-sm:justify-start max-sm:items-start">
+                        <img className='w-10 h-10 bg-[#B6F4FF] rounded-full max-sm:w-6 max-sm:h-6' src={service} alt="" />
+                        <p className='font-[Poppins] font-normal text-xs text-[#000000] max-sm:text-[10px]'>Services</p>
                     </div>
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11L6 6L1 1" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-                      <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1">
-                    <div className="flex flex-row gap-2 items-center ">
-                        <img className='w-10 h-10 bg-[#FFC210] rounded-full' src={job} alt="" />
-                        <p className='font-[Poppins] font-normal text-xs text-[#000000] '>Jobs</p>
+
+                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1 max-sm:w-[30%] max-sm:py-1 max-sm:p-0 max-sm:justify-around">
+                    <div className="flex flex-row gap-2 items-center max-sm:flex-col max-sm:justify-start max-sm:items-start">
+                        <img className='w-10 h-10 bg-[#FFC210] rounded-full max-sm:w-6 max-sm:h-6' src={job} alt="" />
+                        <p className='font-[Poppins] font-normal text-xs text-[#000000] max-sm:text-[10px]'>Jobs</p>
                     </div>
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11L6 6L1 1" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-                      <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1">
-                    <div className="flex flex-row gap-2 items-center ">
-                        <img className='w-10 h-10 bg-[#6BB07A] rounded-full' src={dog} alt="" />
-                        <p className='font-[Poppins] font-normal text-xs text-[#000000] '>Animals</p>
+
+                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1 max-sm:w-[30%] max-sm:py-1 max-sm:p-0 max-sm:justify-around">
+                    <div className="flex flex-row gap-2 items-center max-sm:flex-col max-sm:justify-start max-sm:items-start">
+                        <img className='w-10 h-10 bg-[#6BB07A] rounded-full max-sm:w-6 max-sm:h-6' src={dog} alt="" />
+                        <p className='font-[Poppins] font-normal text-xs text-[#000000] max-sm:text-[10px]'>Animals</p>
                     </div>
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11L6 6L1 1" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-                      <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1">
-                    <div className="flex flex-row gap-2 items-center ">
-                        <img className='w-10 h-10 bg-[#E9F4F6] rounded-full' src={furniture} alt="" />
-                        <p className='font-[Poppins] font-normal text-xs text-[#000000] '>Furniture & Home Decor</p>
+
+                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1 max-sm:w-[30%] max-sm:py-1 max-sm:p-2 max-sm:justify-around">
+                    <div className="flex flex-row gap-2 items-center max-sm:flex-col max-sm:justify-start max-sm:items-start">
+                        <img className='w-10 h-10 bg-[#E9F4F6] rounded-full max-sm:w-6 max-sm:h-6' src={furniture} alt="" />
+                        <p className='font-[Poppins] font-normal text-xs text-[#000000] max-sm:text-[9px]'>Furniture & Home Decor</p>
                     </div>
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11L6 6L1 1" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-                      <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1">
-                    <div className="flex flex-row gap-2 items-center ">
-                        <img className='w-10 h-10 bg-[#C1E264] rounded-full' src={fashion} alt="" />
-                        <p className='font-[Poppins] font-normal text-xs text-[#000000] '>Fashion & Beauty</p>
+
+                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1 max-sm:w-[30%] max-sm:py-1 max-sm:p-2 max-sm:justify-around">
+                    <div className="flex flex-row gap-2 items-center max-sm:flex-col max-sm:justify-start max-sm:items-start">
+                        <img className='w-10 h-10 bg-[#C1E264] rounded-full max-sm:w-6 max-sm:h-6' src={fashion} alt="" />
+                        <p className='font-[Poppins] font-normal text-xs text-[#000000] max-sm:text-[9px]'>Fashion & Beauty</p>
                     </div>
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11L6 6L1 1" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-                      <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1">
-                    <div className="flex flex-row gap-2 items-center ">
-                        <img className='w-10 h-10 bg-[#D3D3D3] rounded-full' src={book} alt="" />
-                        <p className='font-[Poppins] font-normal text-xs text-[#000000] '>Books, Sports & Hobbies</p>
+
+                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1 max-sm:w-[30%] max-sm:py-1 max-sm:p-2 max-sm:justify-around">
+                    <div className="flex flex-row gap-2 items-center max-sm:flex-col max-sm:justify-start max-sm:items-start">
+                        <img className='w-10 h-10 bg-[#D3D3D3] rounded-full max-sm:w-6 max-sm:h-6' src={book} alt="" />
+                        <p className='font-[Poppins] font-normal text-xs text-[#000000] max-sm:text-[9px]'>Books, Sports & Hobbies</p>
                     </div>
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11L6 6L1 1" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-                      <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1">
-                    <div className="flex flex-row gap-2 items-center ">
-                        <img className='w-10 h-10 bg-[#F9D7B0] rounded-full' src={kid} alt="" />
-                        <p className='font-[Poppins] font-normal text-xs text-[#000000] '>Kids</p>
+
+                <div className="flex flex-row justify-between items-center shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white w-[30%] py-2 my-1 max-sm:w-[30%] max-sm:py-1 max-sm:p-0 max-sm:justify-around">
+                    <div className="flex flex-row gap-2 items-center max-sm:flex-col max-sm:justify-start max-sm:items-start">
+                        <img className='w-10 h-10 bg-[#F9D7B0] rounded-full max-sm:w-6 max-sm:h-6' src={kid} alt="" />
+                        <p className='font-[Poppins] font-normal text-xs text-[#000000] max-sm:text-[10px]'>Kids</p>
                     </div>
                     <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11L6 6L1 1" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />

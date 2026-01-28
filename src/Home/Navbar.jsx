@@ -6,10 +6,11 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="navba flex flex-row justify-center mt-10">
-      <ul className='flex flex-row justify-center gap-5  items-center '>
+    
+    <div className="navba flex flex-row justify-center mt-10 max-sm:ml-21">
+      <ul className='flex flex-row justify-center gap-5  items-center max-sm:flex-wrap max-sm:text-xs'>
         <li>
-          <button className="flex justify-center items-center gap-3 h-[6vh] bg-[#2BBEF9] text-[#FFFFFF] font-normal rounded-3xl w-[9vw]" onClick={() => {
+          <button className="flex justify-center items-center gap-3 h-[6vh] bg-[#2BBEF9] text-[#FFFFFF] font-normal rounded-3xl w-[9vw] max-sm:w-26" onClick={() => {
             navigate("/")
           }}>All Categories</button>
         </li>
@@ -38,6 +39,7 @@ const Navbar = () => {
         }}>Plots</li>
       </ul>
     </div>
+    
   );
 };
 

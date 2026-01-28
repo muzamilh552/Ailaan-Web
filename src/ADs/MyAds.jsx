@@ -4,13 +4,13 @@ import mobile from '../ADs/mobile.jpg'
 const MyAds = () => {
   return (
     <>
-      <div className="flex flex-row gap-6 ml-30">
+      <div className="flex flex-row gap-6 ml-30 max-sm:flex-col max-sm:flex-wrap">
         <button className='text-[white] bg-[#2BBEF9] w-auto py-2 px-6 h-10 border-2 border-gray-100 rounded-3xl'>View All (4)</button>
         <button className='text-[black]  w-auto h-10 border-2 border-gray-400 rounded-3xl py-2 px-6 flex items-center justify-center'>Active Ads (3)</button>
         <button className='text-[black]  w-auto h-10 border-2 border-gray-400 rounded-3xl py-2 px-6 flex items-center justify-center'>Inactive Ads (1)</button>
         <button className='text-[black]  w-auto h-10 border-2 border-gray-400 rounded-3xl py-2 px-6 flex items-center justify-center'>Pending Ads (0)</button>
       </div>
-      <div className="flex flex-row flex-wrap ">
+      <div className="flex flex-row flex-wrap mb-10">
         <div className="flex flex-col mt-6 ml-30 w-141 h-auto shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white">
           <div className="flex flex-row justify-between ">
             <h1 className='font-[Poppins] font-semibold text-xs '>From 08 Aug 23 to 7 Sep 23</h1>

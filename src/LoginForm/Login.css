@@ -3,10 +3,7 @@
     flex-direction: column;
     width: 400px;
     margin: 90px auto;
-
-
 padding: 20px;
-
 }
 .form{
     display: flex;
@@ -48,6 +45,15 @@ label{
 font-size: 1rem;
 }
 
+@media (max-width:640px){
+.Log{
+margin-left: 90px;
+}
+.Log h1{
+    font-size: 1.1rem;
+}
+
+}
 
 
 
