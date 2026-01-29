@@ -7,7 +7,7 @@ import p4 from '../ADs/p4.png'
 const Favourites = () => {
   return (
     <>
-      <div className="flex flex-row flex-wrap mb-12 gap-3 pl-30 max-sm:justify-center max-sm:items-center max-sm:mb-10 max-sm:pl-20">
+      <div className="flex flex-row flex-wrap mb-12 gap-3 pl-30  max-sm:mb-10 max-sm:pl-0 max-sm:ml-[14%] ">
         <div className='flex flex-col'>
           <div className="card">
             <div className="phoneCard">

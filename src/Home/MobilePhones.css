@@ -30,10 +30,15 @@
     font-size: 15px;
 }
 @media (max-width:500px){
+.view {
+    margin-top: 20px;
+    margin-bottom: 0;
+    position: relative;
 
+}
     .view h2 {
     position: absolute;
-    left: 130px;
+    left: 100px;
 }
 
 .view h3 {

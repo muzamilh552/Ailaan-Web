@@ -4,14 +4,14 @@ import mobile from '../ADs/mobile.jpg'
 const MyAds = () => {
   return (
     <>
-      <div className="flex flex-row gap-6 ml-30 max-sm:flex-col max-sm:flex-wrap">
-        <button className='text-[white] bg-[#2BBEF9] w-auto py-2 px-6 h-10 border-2 border-gray-100 rounded-3xl'>View All (4)</button>
-        <button className='text-[black]  w-auto h-10 border-2 border-gray-400 rounded-3xl py-2 px-6 flex items-center justify-center'>Active Ads (3)</button>
-        <button className='text-[black]  w-auto h-10 border-2 border-gray-400 rounded-3xl py-2 px-6 flex items-center justify-center'>Inactive Ads (1)</button>
-        <button className='text-[black]  w-auto h-10 border-2 border-gray-400 rounded-3xl py-2 px-6 flex items-center justify-center'>Pending Ads (0)</button>
+      <div className="flex flex-row gap-6 ml-30 max-sm:ml-[22%] max-sm:gap-1 ">
+        <button className='text-[white] bg-[#2BBEF9] w-auto py-2 px-6 h-10 border-2 border-gray-100 rounded-3xl max-sm:text-[10px] max-sm:w-[22%] max-sm:py-0 max-sm:px-0'>View All (4)</button>
+        <button className='text-[black]  w-auto h-10 border-2 border-gray-400 rounded-3xl py-2 px-6  flex items-center justify-center max-sm:text-[10px] max-sm:w-[22%] max-sm:py-0 max-sm:px-0'>Active Ads (3)</button>
+        <button className='text-[black]  w-auto h-10 border-2 border-gray-400 rounded-3xl py-2 px-6 flex items-center justify-center max-sm:text-[10px] max-sm:w-[22%] max-sm:py-0 max-sm:px-0'>Inactive Ads (1)</button>
+        <button className='text-[black]  w-auto h-10 border-2 border-gray-400 rounded-3xl py-2 px-6 flex items-center justify-center max-sm:text-[10px] max-sm:w-[22%] max-sm:py-0 max-sm:px-0'>Pending Ads (0)</button>
       </div>
-      <div className="flex flex-row flex-wrap mb-10">
-        <div className="flex flex-col mt-6 ml-30 w-141 h-auto shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white">
+      <div className="flex flex-row flex-wrap  mb-10 max-sm:flex-col max-sm:ml-[20%]">
+        <div className="flex flex-col mt-6 ml-[7%] w-141 h-auto shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white max-sm:w-[93%] max-sm:ml-[1%]">
           <div className="flex flex-row justify-between ">
             <h1 className='font-[Poppins] font-semibold text-xs '>From 08 Aug 23 to 7 Sep 23</h1>
             <p className='w-15 h-6 text-[white] bg-[#25D366] rounded-sm py-2 px-4 flex items-center justify-center'>Active</p>
@@ -36,7 +36,7 @@ const MyAds = () => {
           <div className="flex items-center justify-end">
             <button className='bg-[#2BBEF9] text-[white] w-39 h-7 flex justify-center items-center rounded-sm '>Sold</button>
           </div>
-          <div className="flex flex-row justify-between mt-5">
+          <div className="flex flex-row justify-between mt-5 max-sm:gap-1">
             <button className='flex gap-1 justify-center items-center border-2 border-gray-400 rounded-xs text-[#858997] text-[10px] font-semibold w-26 h-8'><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8524 10.9251C13.8524 12.5077 12.5586 13.7903 10.9633 13.7903C9.36805 13.7903 8.0752 12.5077 8.0752 10.9251C8.0752 9.34159 9.36805 8.05902 10.9633 8.05902C12.5586 8.05902 13.8524 9.34159 13.8524 10.9251Z" stroke="#858997" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9624 17.5436C14.4417 17.5436 17.6241 15.0618 19.4158 10.9249C17.6241 6.78804 14.4417 4.30628 10.9624 4.30628H10.9661C7.48678 4.30628 4.30442 6.78804 2.5127 10.9249C4.30442 15.0618 7.48678 17.5436 10.9661 17.5436H10.9624Z" stroke="#858997" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -64,7 +64,7 @@ const MyAds = () => {
           </div>
         </div>
 
-        <div className="flex flex-col mt-6 ml-30 w-141 h-auto shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white">
+        <div className="flex flex-col mt-6 ml-[2%] w-141 h-auto shadow-lg shadow-gray-500/50 p-6 rounded-lg bg-white max-sm:w-[93%]">
           <div className="flex flex-row justify-between ">
             <h1 className='font-[Poppins] font-semibold text-xs '>From 08 Aug 23 to 7 Sep 23</h1>
             <p className='w-15 h-6 text-[white] bg-[#25D366] rounded-sm py-2 px-4 flex items-center justify-center'>Active</p>
@@ -89,7 +89,7 @@ const MyAds = () => {
           <div className="flex items-center justify-end">
             <button className='bg-[#2BBEF9] text-[white] w-39 h-7 flex justify-center items-center rounded-sm '>Sold</button>
           </div>
-          <div className="flex flex-row justify-between mt-5">
+          <div className="flex flex-row justify-between mt-5 max-sm:gap-1">
             <button className='flex gap-1 justify-center items-center border-2 border-gray-400 rounded-xs text-[#858997] text-[10px] font-semibold w-26 h-8'><span><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8524 10.9251C13.8524 12.5077 12.5586 13.7903 10.9633 13.7903C9.36805 13.7903 8.0752 12.5077 8.0752 10.9251C8.0752 9.34159 9.36805 8.05902 10.9633 8.05902C12.5586 8.05902 13.8524 9.34159 13.8524 10.9251Z" stroke="#858997" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9624 17.5436C14.4417 17.5436 17.6241 15.0618 19.4158 10.9249C17.6241 6.78804 14.4417 4.30628 10.9624 4.30628H10.9661C7.48678 4.30628 4.30442 6.78804 2.5127 10.9249C4.30442 15.0618 7.48678 17.5436 10.9661 17.5436H10.9624Z" stroke="#858997" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />

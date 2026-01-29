@@ -61,9 +61,9 @@ const MobilePhones = () => {
                 <h2>Mobile Phones</h2>
                 <h3>View More</h3>
             </div>
-            <div className='flex flex-row gap-5 mt-5 mr-0 mb-2.5 ml-27 flex-wrap max-sm:justify-center max-sm:items-center'>
+            <div className='flex flex-row gap-5 mt-5 mr-0 mb-2.5 ml-27 flex-wrap max-sm:mt-1 max-sm:ml-[14%]'>
 
-                <div className="flex gap-5 py-4 px-2.5 flex-wrap max-sm:flex-col " >
+                <div className="flex gap-5 py-4 px-2.5 flex-wrap  max-sm:gap-2" >
 
 
                     {availablePhones.slice(0, 4).map((product) => {
@@ -71,13 +71,13 @@ const MobilePhones = () => {
                         return (
                             <div onClick={() => {
                                 navigate("/mobile")
-                            }} className=" relative flex w-64 h-81 flex-col bg-[#f5f5f5] py-1.25 px-2.5">
+                            }} className=" relative flex w-64 h-81 flex-col bg-[#f5f5f5] py-1.25 px-2.5 max-sm:w-[47%]">
                                 <img className='w-full h-44 rounded-tl-xl rounded-tr-xl ' src={product?.product_display_image} alt={product?.product_name} />
                                 <div className='content py-1.25 px-2.5'>
-                                    <h6 className=' absolute top-3.5 right-3.5 bg-[black] text-[white] py-1.25 px-3 rounded-xl'>NEW</h6>
+                                    <h6 className=' absolute top-3.5 right-3.5 bg-[black] text-[white] py-1.25 px-3 rounded-xl max-sm:py-1 max-sm:px-1 max-sm:text-xs'>NEW</h6>
                                     <h3 className=' w-53.75 h-11 font-semibold text-sm text-[#141821] leading-5 tracking-normal font-[Poppins] '>{product?.product_name}</h3>
                                     <h4 className=' w-54 h-6 font-normal text-[#858997] text-xs leading-6 font-[Poppins] tracking-normal  '>{product?.product_location}</h4>
-                                    <p className='w-54 h-3.5 font-[Poppins] leading-full text-[#000000] leading-none  text-xs tracking-normal'>{product?.created_at}</p>
+                                    <p className='w-full  h-3.5 font-[Poppins] leading-full text-[#000000] leading-none  text-xs tracking-normal max-sm:mb-3'>{product?.created_at}</p>
                                     <div className=" flex flex-row items-center justify-between ">
                                         <h2 className='w-32 h-5 text-[#000000] leading-5.2 text-lg font-bold'>Rs. {product?.product_price}</h2>
                                         <svg width="20" height="20" viewBox="0 0 23 20" fill={product?.product_favourite ? "red" : "none"} xmlns="http://www.w3.org/2000/svg">
